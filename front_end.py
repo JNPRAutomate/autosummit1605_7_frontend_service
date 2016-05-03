@@ -95,7 +95,7 @@ section {
         <center><h1 class='elegantshadow'><strong>Docker</strong><br><br>
         <button type="submit" name="button" class="btn btn-primary btn-lg" enabled><strong>OK</strong></button></center><br>
     </form>
-    <form class="container text-center" name="pyeztoolbox" method="POST" action="http://172.25.52.59/login"><br>
+    <form class="container text-center" name="pyeztoolbox" method="POST" action="http://172.25.52.59"><br>
         <center><h1 class='elegantshadow'><strong>Monitoring/Telemetry</strong><br><br>
         <button type="submit" name="button" class="btn btn-primary btn-lg" enabled><strong>OK</strong></button></center><br>
     </form>
