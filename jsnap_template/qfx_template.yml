@@ -1,0 +1,35 @@
+tests_include:
+  - test_config
+  - test_user
+  - test_snmp
+
+test_config:
+  - rpc: get-config
+  - item:
+      xpath: //configuration
+      tests:
+        - exists: //system/services/ssh
+          info: "SSH OK"
+          err: "SSH NG"
+        - exists: //system/services/netconf/ssh
+          info: "NETCONF OK"
+          err: "NETCONF NG"
+
+test_user:
+  - rpc: get-config
+  - iterate:
+      xpath: //user[normalize-space(name) = "lab"]
+      tests:   
+        - exists: name
+          info: "USER:lab OK"
+          err: "USER:lab NG"
+
+test_snmp:
+  - rpc: get-config
+  - iterate:
+      xpath: //snmp/community[normalize-space(name) = "lab7"]
+      tests:   
+        - exists: name
+          info: "SNMP OK"
+          err: "SNMP NG"
+
