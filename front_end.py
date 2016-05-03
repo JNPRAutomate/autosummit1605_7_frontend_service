@@ -1,4 +1,15 @@
 #!/usr/bin/python
+from docker import Client
+import influxdb
+import docker.tls as tls
+from os import path
+import os
+import pprint
+import subprocess
+import json
+import os.path
+from sys import platform as _platform
+import requests
 import cherrypy
 import multiprocessing.pool
 from threading import Thread
@@ -78,6 +89,14 @@ section {
     </form>
     <form class="container text-center" name="pyeztoolbox" method="POST" action="/prvsn"><br>
         <center><h1 class='elegantshadow'><strong>Provision Services</strong><br><br>
+        <button type="submit" name="button" class="btn btn-primary btn-lg" enabled><strong>OK</strong></button></center><br>
+    </form>
+    <form class="container text-center" name="pyeztoolbox" method="POST" action="/docker"><br>
+        <center><h1 class='elegantshadow'><strong>Docker</strong><br><br>
+        <button type="submit" name="button" class="btn btn-primary btn-lg" enabled><strong>OK</strong></button></center><br>
+    </form>
+    <form class="container text-center" name="pyeztoolbox" method="POST" action="http://172.25.52.59/"><br>
+        <center><h1 class='elegantshadow'><strong>Monitoring/Telemetry</strong><br><br>
         <button type="submit" name="button" class="btn btn-primary btn-lg" enabled><strong>OK</strong></button></center><br>
     </form>
 </body>
@@ -1638,6 +1657,13 @@ def leaf6_on():
 @app.route('/leaf6_off', methods=['POST'])
 def leaf6_off():
     return render_template('index.html')
+
+@app.route('/docker', methods=['POST'])
+def docker():
+    container = c.create_container(
+        image='hello-world',
+        detach=True,
+    )
 
 def run_web_server():
     cherrypy.tree.graft(app, "/")
