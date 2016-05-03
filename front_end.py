@@ -513,22 +513,22 @@ d.on + span {
 </style>
 <body>
         <div id=stats>
-            <h1 class='elegantshadow'>
+            <h1 class='elegantshadow'>Test1
                 <section>
                         <a href="#" id="button1">&#xF011;</a>
                         <span></span>
                 </section>
-            <h1 class='elegantshadow'>
+            <h1 class='elegantshadow'>Test2
                 <section>
                         <b href="#" id="button2">&#xF011;</b>
                         <span></span>
                 </section>
-            <h1 class='elegantshadow'>
+            <h1 class='elegantshadow'>Test3
                 <section>
                         <c href="#" id="button3">&#xF011;</c>
                         <span></span>
                 </section>
-            <h1 class='elegantshadow'>
+            <h1 class='elegantshadow'>Test4
                 <section>
                         <d href="#" id="button4">&#xF011;</d>
                         <span></span>
