@@ -53,15 +53,10 @@ body {
 </style>
 <body><h1 class='deepshadow'>Provision Services</h1><h1 class='elegantshadow'>
     <form class="container text-center" name="pyeztoolbox" method="POST" action="/provision_services"><br>
-        <center><strong>Customer Name</strong><br><input type="text" name="customername" enabled><br><br>
-        <center><strong>Service 1 - </strong><input type="checkbox" name="service1" onClick="toggle_check(this)" unchecked><br><br>
-        <center><strong>Service 2 - </strong><input type="checkbox" name="service2" onClick="toggle_check(this)" unchecked><br><br>
-        <center><strong>Service 3 - </strong><input type="checkbox" name="service3" onClick="toggle_check(this)" unchecked><br><br>
-        <center><strong>Service 4 - </strong><input type="checkbox" name="service4" onClick="toggle_check(this)" unchecked><br><br>
-        <center><strong>Service 5 - </strong><input type="checkbox" name="service5" onClick="toggle_check(this)" unchecked><br><br>
-        <center><strong>Campus - </strong><input type="checkbox" name="campus" onClick="toggle_check(this)" unchecked><br><br>
-        <center><strong>Internet - </strong><input type="checkbox" name="internet" onClick="toggle_check(this)" unchecked><br><br>
-        <center><strong>Legacy Network - </strong><input type="checkbox" name="legacy" onClick="toggle_check(this)" unchecked><br><br>
+        <center><strong>Name</strong><br><input type="text" name="name" enabled><br><br>
+         <center><strong>IP address</strong><br><input type="text" name="ip_address" enabled><br><br>
+        <center><strong>Campus User - </strong><input type="checkbox" name="campus_user" onClick="toggle_check(this)" unchecked><br><br>
+        <center><strong>Internet User - </strong><input type="checkbox" name="internet_user" onClick="toggle_check(this)" unchecked><br><br>
         <center><button type="submit" name="button" class="btn btn-primary btn-lg" enabled><strong>OK</strong></button></center><br></h1>
         <center><strong>Click the "OK" button above to gather info</strong></center>
         <form class="container text-center" name="main" method="GET" action="/">
