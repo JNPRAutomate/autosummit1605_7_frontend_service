@@ -1,10 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <style>
 h1 {
-  background-image: url('/static/micro_carbon.png');
+  background-image: url('/static/background.png');
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
   font-size: 23px;
   padding: 5px 3px;
@@ -20,7 +22,7 @@ h1.elegantshadow {
 h1.deepshadow {
   color: #e0dfdc;
   background-color: #333;
-  letter-spacing: .1em;
+  letter-spacing: .2em;
   text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #75fae5, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
 }
 h1.insetshadow {
@@ -30,13 +32,13 @@ h1.insetshadow {
   text-shadow: -1px -1px 1px #111, 2px 2px 1px #363636;
 }
 h1.retroshadow {
-  color: #2c2c2c;
+  color: #75fae5;
   background-color: #d5d5d5;
   letter-spacing: .05em;
   text-shadow: 4px 4px 0px #d5d5d5, 7px 7px 0px rgba(0, 0, 0, 0.2);
 }
 body {
-        background-image: url('/static/micro_carbon.png');
+        background-image: url('/static/background.png');
 }
 section {
         margin: 7px auto 0;
@@ -50,17 +52,19 @@ section {
 }
 </style>
 <body>
+ <head><h1 class='deepshadow'><strong>EIS</strong><br><br></head>
     <form class="container text-center" name="pyeztoolbox" method="POST" action="/infra"><br>
-        <center><h1 class='elegantshadow'><strong>Manage Infrastructure</strong><br><br>
+        <center><h1 class='elegantshadow'><strong>Manage Infrastructure</strong><br>
         <button type="submit" name="button" class="btn btn-primary btn-lg" enabled><strong>OK</strong></button></center><br>
     </form>
     <form class="container text-center" name="pyeztoolbox" method="POST" action="/prvsn"><br>
-        <center><h1 class='elegantshadow'><strong>Provision Services</strong><br><br>
+        <center><h1 class='elegantshadow'><strong>Provision Services</strong><br>
         <button type="submit" name="button" class="btn btn-primary btn-lg" enabled><strong>OK</strong></button></center><br>
     </form>
-    <form class="container text-center" name="pyeztoolbox" method="POST" action="/docker"><br>
-        <center><h1 class='elegantshadow'><strong>Docker</strong><br><br>
+    <form class="container text-center" name="pyeztoolbox" method="POST" action="http://172.25.52.59"><br>
+        <center><h1 class='elegantshadow'><strong>Monitoring/Telemetry</strong><br>
         <button type="submit" name="button" class="btn btn-primary btn-lg" enabled><strong>OK</strong></button></center><br>
     </form>
 </body>
 </html>
+{% endblock %}

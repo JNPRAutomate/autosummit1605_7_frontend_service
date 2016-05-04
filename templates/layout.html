@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Automation Toolset for MAC's/IP's</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="static/css/styles.css">
+	</head>
+	<style type="text/css">
+	<!--
+	  @import url(static/css/magnify.css);
+	  @import url(static/css/gps.css);
+	  @import url(static/css/ripple.css);
+	  @import url(static/css/ball.css);
+	  @import url(static/css/default.css);
+	  @import url(static/css/spin.css);
+	-->
+	body {
+	    background-color: lightblue;
+	    background-image: url("/static/Abstract_Background.jpg");
+			background-size:auto;
+	}
+	#btn1 {
+	    width: 40px;
+	    height: 70px;
+	    background: transparent;
+	    border: none;
+	    font-size:0;
+	}
+	</style>
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top"><br>
+		  <div class="container">
+		        <p style="text-align:center"><img id="juniper-logo" alt="Brand" src="static/juniper.svg" height="120" width="160"></p>
+		  </div>
+		</nav>
+
+		<div class="container">
+			{% block content %}{% endblock %}
+		</div>
+	</body>
+</html>
