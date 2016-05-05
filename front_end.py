@@ -13,6 +13,7 @@ from flask import *
 import math
 import time
 import sys
+import os
 
 app = Flask(__name__)
 
@@ -1625,10 +1626,14 @@ def leaf4_off():
 
 @app.route('/leaf5_on', methods=['POST'])
 def leaf5_on():
+    os.system("virsh start t1_leaf05")
+    os.system("virsh start t1_leaf05_child")
     return render_template('index.html')
 
 @app.route('/leaf5_off', methods=['POST'])
 def leaf5_off():
+    os.system("virsh destroy t1_leaf05")
+    os.system("virsh destroy t1_leaf05_child")
     return render_template('index.html')
 
 @app.route('/leaf6_on', methods=['POST'])
