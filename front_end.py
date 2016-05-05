@@ -186,6 +186,18 @@ Provisioned - <br>''')
     print provisioned_services
     return render_template('success.html', info=provisioned_services)
 
+@app.route('/leaf5_on')
+def leaf5_on():
+    os.system("virsh start t1_leaf5")
+    os.system("virsh start t1_leaf5_child")
+    return render_template('index.html')
+
+@app.route('/leaf5_off')
+def leaf5_off():
+    os.system("virsh destroy t1_leaf5")
+    os.system("virsh destory t1_leaf5_child")
+    return render_template('index.html')
+
 def run_web_server():
     global dport
     cherrypy.tree.graft(app, "/")
