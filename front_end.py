@@ -198,6 +198,18 @@ def leaf5_off():
     os.system("virsh destory t1_leaf5_child")
     return render_template('index.html')
 
+@app.route('/leaf6_on')
+def leaf5_on():
+    os.system("virsh start t1_leaf6")
+    os.system("virsh start t1_leaf6_child")
+    return render_template('index.html')
+
+@app.route('/leaf6_off')
+def leaf5_off():
+    os.system("virsh destroy t1_leaf6")
+    os.system("virsh destory t1_leaf6_child")
+    return render_template('index.html')
+
 def run_web_server():
     global dport
     cherrypy.tree.graft(app, "/")
