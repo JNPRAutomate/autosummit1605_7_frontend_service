@@ -131,7 +131,7 @@ Provisioned - <br>''')
 
         dev.close()
 
-        provisioned_services += Markup('''Campus User: '''+name+''' with IP Address: '''+ip_address+'''<br>''')
+        provisioned_services += Markup('''Campus User: '''+name+''' with IP Address:'''+ip_address+'''<br>''')
 
     if internet_user:
         dev = Device(host='172.25.45.68', user='lab', passwd='jnpr123')
