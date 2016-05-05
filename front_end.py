@@ -187,49 +187,49 @@ Provisioned - <br>''')
     return render_template('success.html', info=provisioned_services)
 
 @app.route('/leaf01_on')
-def leaf05_on():
+def leaf01_on():
     os.system("virsh start t1_leaf01")
     os.system("virsh start t1_leaf01_child")
     return render_template('index.html')
 
 @app.route('/leaf01_off')
-def leaf05_off():
+def leaf01_off():
     os.system("virsh destroy t1_leaf01")
     os.system("virsh destory t1_leaf01_child")
     return render_template('index.html')
 
 @app.route('/leaf02_on')
-def leaf05_on():
+def leaf02_on():
     os.system("virsh start t1_leaf02")
     os.system("virsh start t1_leaf02_child")
     return render_template('index.html')
 
 @app.route('/leaf02_off')
-def leaf05_off():
+def leaf02_off():
     os.system("virsh destroy t1_leaf02")
     os.system("virsh destory t1_leaf02_child")
     return render_template('index.html')
 
 @app.route('/leaf03_on')
-def leaf05_on():
+def leaf03_on():
     os.system("virsh start t1_leaf03")
     os.system("virsh start t1_leaf03_child")
     return render_template('index.html')
 
 @app.route('/leaf03_off')
-def leaf05_off():
+def leaf03_off():
     os.system("virsh destroy t1_leaf03")
     os.system("virsh destory t1_leaf03_child")
     return render_template('index.html')
 
 @app.route('/leaf04_on')
-def leaf05_on():
+def leaf04_on():
     os.system("virsh start t1_leaf04")
     os.system("virsh start t1_leaf04_child")
     return render_template('index.html')
 
 @app.route('/leaf04_off')
-def leaf05_off():
+def leaf04_off():
     os.system("virsh destroy t1_leaf04")
     os.system("virsh destory t1_leaf04_child")
     return render_template('index.html')
@@ -247,8 +247,8 @@ def leaf05_off():
     return render_template('index.html')
 
 @app.route('/leaf06_on')
-def leaf006_on():
-    os.system("virsh start t1_leaf006")
+def leaf06_on():
+    os.system("virsh start t1_leaf06")
     os.system("virsh start t1_leaf06_child")
     return render_template('index.html')
 
