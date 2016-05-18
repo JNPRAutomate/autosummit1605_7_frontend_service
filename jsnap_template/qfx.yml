@@ -1,0 +1,8 @@
+hosts:
+ - device: gelgoog
+   username: lab
+   passwd: lab
+
+tests:
+ - g.yml
+
