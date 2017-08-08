@@ -13,6 +13,7 @@ import multiprocessing.pool
 import math
 import time
 import sys
+<<<<<<< HEAD
 import yaml
 from docker import Client
 from sys import platform as _platform
@@ -67,6 +68,9 @@ if args.p:
         print "Please select a TCP Port between 1-65535"
         parser.print_help()
         sys.exit()
+=======
+import os
+>>>>>>> origin/master
 
 app = Flask(__name__)
 
@@ -282,6 +286,7 @@ def spine02_off():
     os.system("virsh destory t1_spine02_child")
     return render_template('index.html')
 
+<<<<<<< HEAD
 @app.route('/vmx01_on')
 def vmx01_on():
     os.system("virsh start t1_vmx01")
@@ -292,6 +297,18 @@ def vmx01_on():
 def vmx01_off():
     os.system("virsh destroy t1_vmx01")
     os.system("virsh destory t1_vmx01_child")
+=======
+@app.route('/leaf5_on', methods=['POST'])
+def leaf5_on():
+    os.system("virsh start t1_leaf05")
+    os.system("virsh start t1_leaf05_child")
+    return render_template('index.html')
+
+@app.route('/leaf5_off', methods=['POST'])
+def leaf5_off():
+    os.system("virsh destroy t1_leaf05")
+    os.system("virsh destroy t1_leaf05_child")
+>>>>>>> origin/master
     return render_template('index.html')
 
 @app.route('/vmx02_on')
